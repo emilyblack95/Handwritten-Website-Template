@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- Author: Emily Black, 04/21/17 -->
+<!-- Background: http://cssdeck.com/labs/css3-notebook-paper -->
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Emily Black</title>
+		
+		<!-- CSS imports -->
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<link href='favicon.ico' rel='shortcut icon'>
+		
+		<!-- JavaScript imports -->
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/type-it.js"></script>
+		
+	</head>
+	<body>
+		<p class="paper"><br><br><br><br>
+		<div class="container" id="container">
+			<span id="textArea" class="type-it" style="color:#000000;"></span>
+		</div>
+		<script type="text/javascript">
+				var firstH = "Hello,";
+				var secondH = "I'm <strong>Emily Black</strong>.";
+				var thirdH = "Get to know <a onclick='about()' href='#'>me</a>.";
+				var fourthH = "<a href='EmilyBlackResume.pdf'><i class='fa fa-arrow-circle-down' aria-hidden='true'></i></a> // <a href='https://github.com/EmilyBlack95'><i class='fa fa-github-square' aria-hidden='true'></i></a> // <a href='https://linkedin.com/in/EmilyBlack95/'><i class='fa fa-linkedin-square' aria-hidden='true'></i></a> // <a href='mailto:emily@ou.edu'><i class='fa fa-envelope' aria-hidden='true'></i></a>";
+				var firstA = "Born in Jacksonville, FL in late 1995, I was fortunate enough to grow up with the rapid changes in technology. I got to witness the end of some technologies and the advent of other technologies. The first computer language I learned was HTML - back when MySpace was a thing and you could customize profiles by embedding HTML. This happened at the age of 12. After buffing up a bit on HTML in high school, my first year of college unfolded and Java was the second computer language I learned. Ever since then, I've considered myself devoted to computer science. ❤";
+				var secondA = "My hobbies include: Exercising • Gaming • Designing • Coding";
+				var thirdA = "Want to go <a onclick='home()' href='#'>back</a>?"
+				var space = "&nbsp;"
+				
+				home();
+				
+				function about() {
+					document.getElementById("container").style.fontSize = "2em";
+					$('.type-it').typeIt({
+						startDelete: true,
+						strings: [firstA, space, secondA, space, thirdA]
+					});
+				}
+				
+				function home() {
+					document.getElementById("container").style.fontSize = "5em";
+					$('.type-it').typeIt({
+						startDelete: true,
+						strings: [firstH, secondH, thirdH, space, fourthH]
+					});
+				}
+		</script>
+		</p>
+	</body>
+</html>
